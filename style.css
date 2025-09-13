@@ -155,8 +155,19 @@ html,body{
   margin-top:8px
 }
 /* تعديل الأزرار الواسعة */
+
+
+
+
 .btn.wide {
   grid-column: span 2; /* الأزرار اللي محتاجة تتسع على عمودين بدل 4 */
+  background: #3a8ee6; /* Copy يبقى أزرق */
+  color: #fff;
+}
+/* زرار del */
+.btn.func[data-fn="del"] {
+  background: #e74c3c; /* أحمر/احمؤ */
+  color: #fff;
 }
 .btn.zero {
   grid-column: auto; /* يرجع زي باقي الأزرار */
@@ -164,17 +175,22 @@ html,body{
 .btn.num{
   background:linear-gradient(180deg,#3e4246,#35383b)
 }
-.btn.op{
-  background:linear-gradient(180deg,#40474b,#33383b);
-  color:var(--accent)
+#shiftBtn, #degRadBtn {
+  background: #ffd700; /* أصفر فاتح */
+  color: #000; /* الخط أسود */
+}
+.btn.op {
+  background: #8e44ad; /* لون جديد زي بنفسجي مثلاً */
+  color: #fff;
 }
 .btn.equal {
-  background: var(--accent);
-  color: #121212;
+  background: #4CAF50; /* أخضر */
+  color: #fff;
 }
 .btn.clear{
   background:#9b2b2b;
-  color:white
+  background: #ff7a18; /* برتقالي */
+  color: #fff;
 }
 .muted{
   opacity:0.8;
@@ -213,14 +229,6 @@ html,body{
   font-size: 14px;
   font-family: sans-serif;
 }
-
-
-
-
-
-
-
-
 @media (max-width:480px){
   .calculator{
     width: 100%;
@@ -230,7 +238,7 @@ html,body{
     gap: 4px; /* المسافة بين الأزرار ضيقة جدًا */
   }
   .btn{
-    padding: 18px 5px;  /* ارتفاع وعرض صغير جدًا */
-    font-size: 12px;   /* خط صغير جدًا */
+    padding: 12px 5px;  /* ارتفاع وعرض صغير جدًا */
+    font-size: 18px;   /* خط صغير جدًا */
   }
 }
