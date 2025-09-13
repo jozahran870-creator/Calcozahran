@@ -16,17 +16,45 @@ html,body{
   align-items:center;
   justify-content:center
 }
+
 .calculator{
-  width: 420px;
-  background:var(--panel);
+  width: auto; /* بدل 420px عشان تكبر مع المحتوى */
+  background: var(--panel);
   border-radius: 12px;
   padding: 16px;
-  padding-top: 25px;  /* مساحة صغيرة للـ reminder فوق الشاشة */
+  padding-top: 25px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.6);
   position: relative;
   margin: auto;
   box-sizing: border-box;
-} 
+  display: inline-block; /* يخليها تكبر مع المحتوى */
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 أزرار في الصف */
+  gap: 10px; /* وسّع المسافة بين الأزرار */
+  margin-top: 16px;
+}
+
+.btn{
+  background:var(--btn);
+  border-radius:10px;
+  padding:16px 12px; /* كبر الأزرار شوي */
+  color:var(--text);
+  border:0;
+  cursor:pointer;
+  font-weight:600;
+  box-shadow:inset 0 -2px rgba(0,0,0,0.3);
+  transition:transform 0.1s ease, background 0.2s ease;
+}
+.btn:hover{
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+
+
 .top-row{
   display:flex;
   gap:10px;
@@ -84,33 +112,12 @@ html,body{
   text-overflow:clip;
   margin-top:8px
 }
-.buttons {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 5 أزرار في كل صف */
-  gap: 8px;
-  margin-top: 12px;
-}
 /* تعديل الأزرار الواسعة */
 .btn.wide {
   grid-column: span 2; /* الأزرار اللي محتاجة تتسع على عمودين بدل 4 */
 }
 .btn.zero {
   grid-column: auto; /* يرجع زي باقي الأزرار */
-}
-.btn{
-  background:var(--btn);
-  border-radius:8px;
-  padding:12px 8px;
-  color:var(--text);
-  border:0;
-  cursor:pointer;
-  font-weight:600;
-  box-shadow:inset 0 -2px rgba(0,0,0,0.3);
-  transition:transform 0.1s ease, background 0.2s ease
-}
-.btn:hover{
-  transform:scale(1.05);
-  filter:brightness(1.1)
 }
 .btn.num{
   background:linear-gradient(180deg,#3e4246,#35383b)
