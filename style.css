@@ -16,23 +16,9 @@ html,body{
   align-items:center;
   justify-content:center
 }
-
-
-
-
-
-
-
 .calculator{
   width: 420px;
-  
-  
-  
   background:var(--panel);
-
-  
-  
-  
   border-radius: 12px;
   padding: 16px;
   padding-top: 25px;  /* مساحة صغيرة للـ reminder فوق الشاشة */
@@ -40,25 +26,7 @@ html,body{
   position: relative;
   margin: auto;
   box-sizing: border-box;
-}
-
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-
+} 
 .top-row{
   display:flex;
   gap:10px;
@@ -116,11 +84,18 @@ html,body{
   text-overflow:clip;
   margin-top:8px
 }
-.buttons{
-  display:grid;
-  grid-template-columns:repeat(8,1fr);
-  gap:8px;
-  margin-top:12px
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 أزرار في كل صف */
+  gap: 8px;
+  margin-top: 12px;
+}
+/* تعديل الأزرار الواسعة */
+.btn.wide {
+  grid-column: span 2; /* الأزرار اللي محتاجة تتسع على عمودين بدل 4 */
+}
+.btn.zero {
+  grid-column: auto; /* يرجع زي باقي الأزرار */
 }
 .btn{
   background:var(--btn);
@@ -144,22 +119,13 @@ html,body{
   background:linear-gradient(180deg,#40474b,#33383b);
   color:var(--accent)
 }
-
 .btn.equal {
   background: var(--accent);
   color: #121212;
 }
-
 .btn.clear{
   background:#9b2b2b;
   color:white
-}
-.btn.wide{
-  grid-column:5 / 9;
-  background:#2f6b9b
-}
-.btn.zero{
-  grid-column:1 / 3
 }
 .muted{
   opacity:0.8;
@@ -188,7 +154,6 @@ html,body{
   direction: ltr;
   text-align: right; /* يخلي الكتابة تبدأ من الشمال */
 }
-
 .header-reminder {
   position: relative; 
   top: -10px;   /* الكلام يطلع فوق شوية */
