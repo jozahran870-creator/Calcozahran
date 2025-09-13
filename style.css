@@ -219,9 +219,13 @@ html,body{
   direction: ltr;
   text-align: right; /* يخلي الكتابة تبدأ من الشمال */
 }
+
+
+
+
 .header-reminder {
   position: relative; 
-  top: -10px;   /* الكلام يطلع فوق شوية */
+  top: -5px;   /* الكلام يطلع فوق شوية */
   width: 100%;
   text-align: center;
   background: transparent;
@@ -229,6 +233,11 @@ html,body{
   font-size: 14px;
   font-family: sans-serif;
 }
+
+
+
+
+
 @media (max-width:480px){
   .calculator{
     width: 100%;
