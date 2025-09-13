@@ -1,0 +1,91 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="ar">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>آلة حاسبة</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body dir="rtl">
+<div class="calculator">
+  <div class="header-reminder">ماتنساش تقفل القوس</div>
+
+
+  <div class="top-row">
+  
+    <div class="mode">
+      <button id="degRadBtn">DEG</button>
+      <button id="shiftBtn" class="muted">SHIFT</button>
+    </div>
+    <div class="display">
+      <div id="memoryIndicator" class="mem">M</div>
+      <input id="expr" class="expr" inputmode="none" readonly />
+      <div id="result" class="result">0</div>
+    </div>
+  </div>
+  <div class="buttons">
+    <!-- row 1 -->
+    <button class="btn func" data-fn="mc">MC</button>
+    <button class="btn func" data-fn="mplus">M+</button>
+    <button class="btn func" data-fn="mminus">M-</button>
+    <button class="btn func" data-fn="mr">MR</button>
+    <button class="btn" data-op=")">(</button>
+	<button class="btn" data-op="(">)</button>	
+    <button class="btn func" data-fn="del">⌫</button>
+    <button class="btn clear" data-fn="ac">AC</button>
+
+    <!-- row 2 -->
+    <button class="btn func" data-fn="sin">sin</button>
+    <button class="btn func" data-fn="cos">cos</button>
+    <button class="btn func" data-fn="tan">tan</button>
+    <button class="btn func" data-fn="^">x^y</button>
+    <button class="btn func" data-fn="ln">ln</button>
+    <button class="btn func" data-fn="log">log</button>
+    <button class="btn func" data-fn="sqrt">√</button>
+    <button class="btn func" data-fn="fact">n!</button>
+
+    <!-- row 3 -->
+    <button class="btn num" data-num="9">9</button>
+    <button class="btn num" data-num="8">8</button>
+    <button class="btn num" data-num="7">7</button>
+
+    <button class="btn op" data-op="÷">÷</button>
+    <button class="btn func" data-fn="inv">1/x</button>
+    <button class="btn func" data-fn="percent">%</button>
+    <button class="btn func" data-fn="frac">a/b</button>
+    <button class="btn func" data-fn="pi">π</button>
+
+    <!-- الصف الرابع (بعد التبديل) -->
+    <button class="btn num" data-num="6">6</button>
+	<button class="btn num" data-num="5">5</button>
+    <button class="btn num" data-num="4">4</button>
+    <button class="btn op" data-op="×">×</button>
+    <button class="btn func" data-fn="exp">e^x</button>
+    <button class="btn func" data-fn="abs">|x|</button>
+    <button class="btn func" data-fn="+/-">+/-</button>
+    <button class="btn func" data-fn="ans">ANS</button>
+
+    <!-- الصف الخامس -->
+    <button class="btn num" data-num="3">3</button>
+    <button class="btn num" data-num="2">2</button>
+    <button class="btn num" data-num="1">1</button>
+    <button class="btn op" data-op="+">+</button>
+    <button class="btn equal" data-fn="=">=</button>
+
+    <!-- الجديد -->
+    <button class="btn func" data-fn="sd">S↔D</button>
+    <button class="btn func" data-fn="ceil">⌈x⌉</button>
+	<button class="btn func" data-fn="rand">Rand</button>
+	
+    <!-- row 6 -->
+    <button class="btn num zero" data-num="0">0</button>
+    <button class="btn num" data-num=".">.</button>
+    <button class="btn op" data-op="-">-</button>
+    <button class="btn wide" data-fn="copy">Copy</button>
+  </div>
+  <div class="footer">تصميم يوسف زهران</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,201 @@
+/* style.css */
+:root{
+  --bg:#1f2326;
+  --panel:#2b2f33;
+  --btn:#3a3f44;
+  --accent:#ff7a18;
+  --muted:#9aa0a6;
+  --text:#e8eef2;
+}
+*{box-sizing:border-box;font-family:Tahoma,Arial,Helvetica,sans-serif}
+html,body{
+  height:100%;
+  margin:0;
+  background:linear-gradient(180deg,#121416 0%, #1a1d20 100%);
+  display:flex;
+  align-items:center;
+  justify-content:center
+}
+
+
+
+
+
+
+
+.calculator{
+  width: 420px;
+  
+  
+  
+  background:var(--panel);
+
+  
+  
+  
+  border-radius: 12px;
+  padding: 16px;
+  padding-top: 25px;  /* مساحة صغيرة للـ reminder فوق الشاشة */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  position: relative;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+.top-row{
+  display:flex;
+  gap:10px;
+  align-items:center
+}
+.mode{
+  display:flex;
+  flex-direction:column;
+  gap:8px
+}
+.mode button{
+  background:transparent;
+  border:1px solid rgba(255,255,255,0.06);
+  color:var(--muted);
+  padding:6px 8px;
+  border-radius:6px;
+  cursor:pointer
+}
+/* ✅ شاشة العرض مكبرة */
+.display{
+  flex:1;
+  position:relative;
+  padding:12px;
+  background:linear-gradient(180deg,#272b2f,#232628);
+  border-radius:10px;
+  min-height:110px; /* 👈 كبرناها */
+  color:var(--text);
+}
+.display .mem{
+  position:absolute;
+  left:10px;
+  top:8px;
+  color:var(--accent);
+  font-weight:bold;
+  visibility:hidden
+}
+.display .expr{
+  width:100%;
+  border:0;
+  background:transparent;
+  color:var(--muted);
+  font-size:20px; /* 👈 خط أكبر */
+  text-align:left;
+  padding-right:10px;
+  outline:none;
+  white-space:nowrap;
+  overflow-x:auto; /* 👈 سكرول لو طويل */
+}
+.display .result{
+  font-size:34px; /* 👈 كبرنا النتيجة */
+  text-align:left;
+  padding-right:10px;
+  white-space:nowrap;
+  overflow-x:auto;
+  text-overflow:clip;
+  margin-top:8px
+}
+.buttons{
+  display:grid;
+  grid-template-columns:repeat(8,1fr);
+  gap:8px;
+  margin-top:12px
+}
+.btn{
+  background:var(--btn);
+  border-radius:8px;
+  padding:12px 8px;
+  color:var(--text);
+  border:0;
+  cursor:pointer;
+  font-weight:600;
+  box-shadow:inset 0 -2px rgba(0,0,0,0.3);
+  transition:transform 0.1s ease, background 0.2s ease
+}
+.btn:hover{
+  transform:scale(1.05);
+  filter:brightness(1.1)
+}
+.btn.num{
+  background:linear-gradient(180deg,#3e4246,#35383b)
+}
+.btn.op{
+  background:linear-gradient(180deg,#40474b,#33383b);
+  color:var(--accent)
+}
+
+.btn.equal {
+  background: var(--accent);
+  color: #121212;
+}
+
+.btn.clear{
+  background:#9b2b2b;
+  color:white
+}
+.btn.wide{
+  grid-column:5 / 9;
+  background:#2f6b9b
+}
+.btn.zero{
+  grid-column:1 / 3
+}
+.muted{
+  opacity:0.8;
+  color:var(--muted)
+}
+.footer{
+  text-align:center;
+  color:var(--muted);
+  font-size:12px;
+  margin-top:12px
+}
+@media (max-width:480px){
+  .calculator{
+    width:100%;
+    padding:10px
+  }
+  .buttons{
+    gap:6px
+  }
+  .btn{
+    padding:10px 6px;
+    font-size:14px
+  }
+}
+#expr {
+  direction: ltr;
+  text-align: right; /* يخلي الكتابة تبدأ من الشمال */
+}
+
+.header-reminder {
+  position: relative; 
+  top: -10px;   /* الكلام يطلع فوق شوية */
+  width: 100%;
+  text-align: center;
+  background: transparent;
+  color: #fff;
+  font-size: 14px;
+  font-family: sans-serif;
+}
