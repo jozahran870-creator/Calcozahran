@@ -171,3 +171,17 @@ html,body{
   font-size: 14px;
   font-family: sans-serif;
 }
+
+@media (max-width:480px){
+  .calculator{
+    width:100%;
+    padding:10px
+  }
+  .buttons{
+    gap:6px
+  }
+  .btn{
+    padding:10px 6px;
+    font-size:14px
+  }
+}
