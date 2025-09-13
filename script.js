@@ -427,7 +427,16 @@ case 'frac': {
       case 'abs': push('Math.abs('); break;
       case 'floor': push('floor('); break;
       case 'ceil': push('ceil('); break;
-      case 'rand': push(Math.random().toFixed(6)); break;
+	  
+case 'rand': 
+    if(!ansInserted){   // لو ANS مش مدخّل دلوقتي
+        push(Math.random().toFixed(6));
+        ansInserted = true; // تمنع تكرار الرقم قبل أي إدخال جديد
+    }
+    break;
+	  
+	  
+	  
       case 'copy': copyResult(); break;
       default:
         break;
